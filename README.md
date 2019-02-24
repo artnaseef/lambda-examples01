@@ -2,6 +2,6 @@
 Some lambda examples
 
 # To Use
-Clone the repo
-mvn clean package
-./runit
+1. Clone the repo
+1. mvn clean package
+1. ./runit
