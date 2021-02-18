@@ -7,6 +7,8 @@ public class LambdaExample01 {
 	}
 
 	public void instanceMain(String[] args) {
+		this.traditionalInlineRunnable();
+
 		//
 		// Simple lambda via assignment
 		//
@@ -32,6 +34,17 @@ public class LambdaExample01 {
 		//
 		this.runSomething(this::methodExecutedViaLambda);
 		System.out.println();
+	}
+
+	private void traditionalInlineRunnable() {
+		System.out.println("Traditional Runnable");
+
+		this.runSomething(new Runnable() {
+			@Override
+			public void run() {
+				System.out.println("hello from inline custom Runnable");
+			}
+		});
 	}
 
 	private void runSomething(Runnable runnable) {
